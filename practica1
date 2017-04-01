@@ -1,0 +1,77 @@
+Centos 7:
+
+Install mySQL 
+
+wget http://repo.mysql.com/mysql-community-release-el7-5.noarch.rpm
+sudo rpm -ivh mysql-community-release-el7-5.noarch.rpm
+yum update
+
+sudo yum install mysql-server
+sudo systemctl start mysqld //start
+* sudo /usr/bin/mysql_secure_installation // instalación segura con password
+
+sudo yum install mariadb-server mariadb
+
+Install PHP 
+
+sudo yum install php php-mysql
+
+
+Install Apache
+
+sudo yum install httpd
+sudo systemctl start httpd.service //inicia servicio
+sudo systemctl enable httpd.service //inicia el servicio al prender
+ ------
+1504987451313487
+
+
+Droplet Name: centos-2gb-nyc2-01
+IP Address: 192.241.187.240
+Username: root
+pass: 558C7326D4D4F
+ ------
+
+mysql root password:  558C7326D4D4F
+
+https://github.com/bcit-ci/CodeIgniter/archive/3.1.3.zip
+
+
+
+ Instalación de Laravel
+
+
+
+ <VirtualHost *:80>
+    DocumentRoot /var/www/html/constructora/public
+    ServerName 192.241.187.240
+
+    <Directory /var/www/html/constructora/>
+        AllowOverride All
+    </Directory>
+</VirtualHost>
+/*
+composer dump-autoload
+*/
+
+
+Copiar assets en public
+crear controlador->ruta al controlador
+En view-> copiar los html y cambiarles la extensión (pagina.blade.php)
+
+
+Error: permision denied storage
+php artisan cache:clear 
+chmod -R 777 app/storage 
+composer dump-autoload  
+
+public/assets/html/assets/html/assets/css
+
+
+M11531TDG4972 //pass for tplink
+
+
+Generar modelos 
+
+
+kmryojprnrluqzix
