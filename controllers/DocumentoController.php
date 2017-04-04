@@ -70,7 +70,7 @@ class DocumentoController extends Controller {
 		    Input::file('rutadoc')->move($destino, $fileName);
 		    $data['rutadoc'] = $fileName;
             $fecha1 = DateTime::createFromFormat('d/m/Y', $data['fecha']);
-			$data['fecha'] = $fecha1->format("Y-m-d h:i:s");
+			//$data['fecha'] = $fecha1->format('Y-m-d H:i:s');     
 		    $documento->fill($data);	
 		    $documento->save();
 
@@ -104,8 +104,8 @@ class DocumentoController extends Controller {
                 {
                         App::abort(404)->with('message', 'Documento no encontrado');
                 }
-
-		
+		$id = $documento->id;
+                Session::put('idocumento', $id);	
                 return View::make('site/documentos/show', array('documento' => $documento));
 		
 	}

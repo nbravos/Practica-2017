@@ -47,7 +47,8 @@
                         <div class="form-group"> 
 			                  {{ Form::label( 'archivo', 'Archivo') }}  
                         <br>                                                
-			                 <a href="{!!route('descargardoc', $documento->rutadoc)!!}" class="btn btn-primary">Descargar</a> 
+			                 <a href="{!!route('descargardoc', $documento->rutadoc)!!}" class="btn btn-primary">Descargar</a> <a href="href="http://aragonltda.cl/items/doc">" class="btn btn-primary pull-right">Modificar Items</a>
+
                         </div>
                         <div class="form-group"> 
                         {{ Form::label( 'fecha', 'Fecha') }}
